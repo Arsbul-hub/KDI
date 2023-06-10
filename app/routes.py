@@ -107,7 +107,6 @@ def remove_file(path):
 @app.route('/')
 @app.route("/index")
 def index():
-    print(request.args.get("is_xhr"))
     data = PagesData.query.get("index")
     allow_background_image = False
     site_name = ""
@@ -172,13 +171,13 @@ def register():
     return render_template('forms/register.html', user=current_user, title='Register', form=form)
 
 
-@app.route("/Панель управления")
+@app.route("/admin_panel")
 @login_required
 def admin_panel():
     return render_template("admin_panel.html", user=current_user, admin_username=app.config["DEFAULT_ADMIN_USERNAME"])
 
 
-@app.route("/Настройки сайта", methods=["GET", "POST"])
+@app.route("/site_settings", methods=["GET", "POST"])
 @login_required
 def site_settings():
     form = ConfigForm()
@@ -212,7 +211,7 @@ def site_settings():
 
 
 @login_required
-@app.route("/Изменить страницу", methods=["GET", "POST"])
+@app.route("/edit_page_description", methods=["GET", "POST"])
 def edit_page_description():
     form = PageDataForm()
     page = request.args.get("page")
@@ -237,7 +236,7 @@ def edit_page_description():
     return render_template("forms/edit_page_description.html", user=current_user, form=form, page_name=page_name)
 
 
-@app.route("/Добавить новость", methods=['GET', 'POST'])
+@app.route("/add_news", methods=['GET', 'POST'])
 @login_required
 def add_news():
     action = request.args.get("action")
@@ -269,11 +268,9 @@ def add_news():
     return render_template("forms/add_news.html", user=current_user, form=form)
 
 
-@app.route("/Новости")
+@app.route("/news")
 def news():
     action = request.args.get('action')
-
-    print(action)
     if action == "show":
         news_list = News.query.get(request.args.get('id'))
         return render_template("show_news.html", user=current_user, news=news_list)
@@ -296,7 +293,7 @@ def news():
                            case={"gent"})
 
 
-@app.route("/Добавить животное", methods=['GET', 'POST'])
+@app.route("/add_horse", methods=['GET', 'POST'])
 @login_required
 def add_animal():
     action = request.args.get("action")
@@ -331,7 +328,7 @@ def add_animal():
     return render_template("forms/add_animal.html", user=current_user, form=form)
 
 
-@app.route('/Наши животные')
+@app.route('/our_horses')
 def our_animals():
     action = request.args.get('action')
     if current_user.is_authenticated and action:
@@ -348,7 +345,7 @@ def our_animals():
                            user=current_user)
 
 
-@app.route('/Лошади на продаже')
+@app.route('/for_sale_horses')
 def for_sale_animals():
     action = request.args.get('action')
     if current_user.is_authenticated and action:
@@ -365,7 +362,7 @@ def for_sale_animals():
                            user=current_user)
 
 
-@app.route("/Добавить изображение", methods=['GET', 'POST'])
+@app.route("/add_image", methods=['GET', 'POST'])
 @login_required
 def add_image_to_gallery():
     action = request.args.get("action")
@@ -380,7 +377,7 @@ def add_image_to_gallery():
     return render_template("forms/add_image.html", user=current_user, form=form)
 
 
-@app.route("/Галерея")
+@app.route("/gallery")
 def gallery():
     action = request.args.get('action')
     if current_user.is_authenticated and action:
@@ -396,7 +393,7 @@ def gallery():
 
 
 @login_required
-@app.route("/Редактировать контакты", methods=["GET", "POST"])
+@app.route("/edit_contacts", methods=["GET", "POST"])
 def edit_contacts():
     form = EditContacts()
     if form.validate_on_submit():
@@ -429,7 +426,7 @@ def edit_contacts():
     return render_template("forms/edit_contacts.html", user=current_user, form=form)
 
 
-@app.route("/Контакты")
+@app.route("/contacts")
 def contacts():
     email, phone_1, phone_2, vk = "", "", "", ""
     if Config.query.filter_by(category="contacts").all():
@@ -442,28 +439,28 @@ def contacts():
     return render_template("contacts.html", user=current_user, vk=vk, email=email, phone_1=phone_1, phone_2=phone_2)
 
 
-@app.route("/Катание на лошадях")
+@app.route("/horse_riding")
 def horse_riding():
     data = PagesData.query.get("horse_riding")
 
     return render_template("horse_riding.html", user=current_user, site_data=data)
 
 
-@app.route("/Пргулки в экипаже")
+@app.route("/crew_riding")
 def crew_riding():
     data = PagesData.query.get("crew_riding")
 
     return render_template("crew_riding.html", user=current_user, site_data=data)
 
 
-@app.route("/Иппотерапия")
+@app.route("/hippotherapy")
 def hippotherapy():
     data = PagesData.query.get("hippotherapy")
 
     return render_template("hippotherapy.html", user=current_user, site_data=data)
 
 
-@app.route("/Добавить тип навоза", methods=['GET', 'POST'])
+@app.route("/add_manure_type", methods=['GET', 'POST'])
 @login_required
 def add_manure_type():
     action = request.args.get("action")
@@ -499,7 +496,7 @@ def add_manure_type():
     return render_template("forms/add_manure.html", user=current_user, form=form)
 
 
-@app.route('/Конский навоз')
+@app.route('/manure')
 def manure():
     action = request.args.get('action')
     if current_user.is_authenticated and action:
@@ -519,4 +516,3 @@ def manure():
 @app.errorhandler(404)
 def page_not_found(error):
     return render_template('errors/404.html', user=current_user), 404
-
