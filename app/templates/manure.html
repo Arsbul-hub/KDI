@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+{% extends "base.html" %}
+
+<head>
+
+    {% block head %}
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/static/css/manure.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/navigation.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/dialog.css">
+
+    <script type="text/javascript" src="/static/js/dialog.js"></script>
+
+    <title>Наши животные</title>
+
+    {% endblock %}
+</head>
+
+<body>
+{% block after %}
+
+
+<p class="title">Конский навоз</p>
+
+{% if user.is_authenticated %}
+
+<a class="add_button" href="{{url_for('add_manure_type', previous=request.full_path)}}">Добавить животное</a>
+
+{% endif %}
+
+<div id="manure-blocks">
+    <div class="manure-list" id="not-deleted">
+        {% if manure_types %}
+        {% for manure in manure_types %}
+        <dialog id="confirm-dialog-{{manure.id}}-remove" class="confirm-dialog">
+
+            <p class="dialog-title">Вы действительно хотите удалить это животное?</p>
+            <hr>
+            <div class="buttons">
+                <a onclick="close_confirm_dialog({{manure.id}}, 'remove');">Отмена</a>
+                <a href="{{url_for('manure', action='remove',  id=manure.id, previous=request.full_path)}}">Да</a>
+            </div>
+        </dialog>
+        <dialog id="confirm-dialog-{{manure.id}}-move" class="confirm-dialog">
+            <p class="dialog-title">Вы действительно хотите отправить это животное домой?</p>
+            <hr>
+            <div class="buttons">
+                <a onclick="close_confirm_dialog({{manure.id}}, 'move');">Отмена</a>
+                <a href="{{url_for('manure', action='move_to_house',  id=manure.id)}}">Да</a>
+            </div>
+        </dialog>
+        <dialog id="image-dialog-{{manure.id}}" class="image-dialog">
+
+            <a onclick="close_image_dialog({{manure.id}});" class="close-image-dialog-button">
+                <i class="fa-solid fa-xmark"></i>
+            </a>
+            <div class="top">
+                <a onclick="close_image_dialog({{manure.id}});" class="close-image-dialog-button">
+                    <i class="fa-solid fa-xmark"></i>
+                </a>
+                <span>{{manure.name}}</span>
+
+
+                <a download href="{{ manure.cover }}" class="download-image-button">
+                    <i class="fa-solid fa-download"></i>
+                </a>
+            </div>
+            <hr>
+            <a download href="{{ manure.cover }}" class="download-image-button">
+                <i class="fa-solid fa-download"></i>
+            </a>
+            <img src="{{ manure.cover }}">
+
+
+        </dialog>
+        <div class="item-block">
+
+
+            {% if user.is_authenticated %}
+
+
+            <div class="tools">
+
+                <a onclick="open_confirm_dialog({{manure.id}}, 'move');">
+                    <i class="fa-solid fa-shield-dog"></i>
+                </a>
+                <a href="{{url_for('add_manure_type', action='edit', id=manure.id, previous=request.full_path)}}">
+                    <i class="fa-solid fa-pen"></i>
+                </a>
+                <a onclick="open_confirm_dialog({{manure.id}}, 'remove');">
+                    <i class="fa fa-trash-o"></i>
+                </a>
+            </div>
+            {% endif %}
+            <div class="content">
+                <a onclick="open_image_dialog({{manure.id}});">
+                    <img class="cover" src="{{ manure.cover }}">
+                </a>
+
+                <div class="manure">
+                    <div class="title-block">
+                        <span>{{ manure.name }}</span>
+
+                    </div>
+
+                    <hr>
+                    <p class="manures-body">
+                        {{ BeautifulSoup(manure.body, 'lxml').get_text()}}
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+        {% endfor %}
+        {% else %}
+        <div class="is-empty">
+            <img src="static/images/empty-box-icon.svg"
+                 style="filter: invert(57%) sepia(6%) saturate(16%) hue-rotate(43deg) brightness(87%) contrast(89%);">
+            <p>Пока здесь пусто</p>
+
+        </div>
+        {% endif %}
+    </div>
+
+
+</div>
+
+{% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)https://fond-nika.ru/nashi-kontakty -->
+<html lang="ru">
+{% extends "base.html" %}
+
+<head>
+
+    {% block head %}
+    <link type="text/css" rel="stylesheet" href="static/css/contacts.css">
+
+    <title>Контакты</title>
+    {% endblock %}
+</head>
+<body>
+
+
+{% block after %}
+<div class="title-block">
+
+    <span class="title">Контакты</span>
+
+    {% if user.is_authenticated %}
+    <div class="tools">
+        <a href="{{url_for('edit_contacts')}}">
+            <i class="fa-solid fa-pen"></i>
+
+        </a>
+    </div>
+    {% endif %}
+</div>
+<div id="contacts">
+    <div class="contacts-info">
+
+        <div class="info">
+            <p>Наша почта:</p>
+            <a href="mailto: enimals33@mail.ru" style="font-size: 20px">{{email}}</a>
+        </div>
+        <div class="info">
+            <p>Телефон №1:</p>
+            <a href="tel:{{phone_number}}" style="font-size: 34px">{{phone_1}}</a>
+
+        </div>
+        <div class="info">
+            <p>Телефон №2:</p>
+            <a href="tel:{{phone_number}}" style="font-size: 34px">{{phone_1}}</a>
+
+        </div>
+
+
+
+    </div>
+
+    <div class="social-networks-list">
+
+<!--        <a href="{{dzen}}" target="_blank" style="color: black; margin: 10px 0">-->
+<!--            <div class="social-network" id="dzen">-->
+<!--                <img src="/static/images/dzen.png">-->
+<!--                <p>Наш Дзен</p>-->
+
+
+<!--                &lt;!&ndash;https://vk.com/public_dari_dobro_pokrov&ndash;&gt;-->
+<!--            </div>-->
+<!--        </a>-->
+<!--        <a href={{ok}}" target="_blank" style="color: black; margin: 10px 0">-->
+<!--            <div class="social-network" id="ok">-->
+<!--                <i class="fa-brands fa-square-odnoklassniki"></i>-->
+<!--                <p>Мы в одноклассниках</p>-->
+
+
+<!--                &lt;!&ndash;https://vk.com/public_dari_dobro_pokrov&ndash;&gt;-->
+<!--            </div>-->
+<!--        </a>-->
+        <a href="{{vk}}" target="_blank" style="color: black; margin: 10px 0">
+            <div class="social-network" id="vk">
+                <i class="fa-brands fa-vk"></i>
+                <p>Мы во вконтакте</p>
+
+
+                <!--https://vk.com/public_dari_dobro_pokrov-->
+            </div>
+        </a>
+    </div>
+
+</div>
+{% endblock %}
+</body>
+</html>

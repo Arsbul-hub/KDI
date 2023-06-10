@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+{% extends "base.html" %}
+
+<head>
+
+    {% block head %}
+
+    <meta charset="UTF-8">
+    <title>{{form._name}}</title>
+
+    <link rel="stylesheet" type="text/css" href="/static/css/form.css">
+
+    {% endblock %}
+</head>
+<body>
+
+
+{% block after %}
+
+<div class="form-block">
+    <h1>{{form._name}}</h1>
+    <form action="" enctype="multipart/form-data" method="post">
+        {{ form.hidden_tag() }}
+        {{ form.phone_1.label }}
+        <p>
+
+            {{ form.phone_1(size=35) }}
+            {% for error in form.phone_1.errors %}<br>
+            <span class="error">{{ error }}</span>
+            {% endfor %}
+        </p>
+        {{ form.phone_2.label }}
+        <p>
+
+            {{ form.phone_2(size=35) }}
+            {% for error in form.phone_2.errors %}<br>
+            <span class="error">{{ error }}</span>
+            {% endfor %}
+        </p>
+        {{ form.email.label }}
+        <p>
+
+            {{ form.email(size=35) }}
+            {% for error in form.email.errors %}<br>
+            <span class="error">{{ error }}</span>
+            {% endfor %}
+        </p>
+        {{ form.vk.label }}
+        <p>
+
+            {{ form.vk(size=35) }}
+            {% for error in form.vk.errors %}<br>
+            <span class="error">{{ error }}</span>
+            {% endfor %}
+        </p>
+
+<!--        {{ form.ok.label }}-->
+<!--        <p>-->
+
+<!--            {{ form.ok(size=35) }}-->
+<!--            {% for error in form.ok.errors %}<br>-->
+<!--            <span class="error">{{ error }}</span>-->
+<!--            {% endfor %}-->
+<!--        </p>-->
+
+<!--        {{ form.dzen.label }}-->
+<!--        <p>-->
+
+<!--            {{ form.dzen(size=35) }}-->
+<!--            {% for error in form.dzen.errors %}<br>-->
+<!--            <span class="error">{{ error }}</span>-->
+<!--            {% endfor %}-->
+<!--        </p>-->
+
+        {{ form.save() }}
+    </form>
+
+</div>
+{% endblock %}
+</body>
+</html>

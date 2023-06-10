@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+{% extends "base.html" %}
+
+<head>
+
+    {% block head %}
+
+    <meta charset="UTF-8">
+    <title>{{animal.name}}</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/view_animal.css">
+
+    {% endblock %}
+</head>
+
+<body>
+
+
+{% block after %}
+
+<div class="animal-content">
+
+
+    <img class="cover" src="{{ animal.cover }}">
+
+    <div class="animal">
+        <span class="title-block">{{ animal.name }}</span>
+        <div class="animal-body">{{ animal.body|safe }}</div>
+
+    </div>
+
+
+</div>
+{% endblock %}
+</body>
+</html>

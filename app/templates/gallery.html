@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+{% extends "base.html" %}
+
+<head>
+
+    {% block head %}
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/static/css/gallery.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/dialog.css">
+    <script type="text/javascript" src="/static/js/dialog.js"></script>
+
+    <title>Галерея</title>
+
+    {% endblock %}
+</head>
+
+<body>
+
+
+{% block after %}
+
+<span class="title">Галерея</span>
+{% if user.is_authenticated %}
+
+<a class="add_button" href="{{url_for('add_image_to_gallery')}}">Добавить изображение</a>
+
+
+{% endif %}
+
+<div id="news-blocks">
+
+
+    <div class="news-list">
+        {% if gallery_list %}
+        {% for n in gallery_list %}
+        <dialog id="confirm-dialog-{{n.id}}-remove" class="confirm-dialog">
+
+            <p class="dialog-title">Вы действительно хотите удалить это изображение?</p>
+            <hr>
+            <div class="buttons">
+                <a onclick="close_confirm_dialog({{n.id}}, 'remove');">Отмена</a>
+                <a href="{{url_for('gallery', action='remove', id=n.id)}}">Да</a>
+            </div>
+
+
+        </dialog>
+        <dialog id="image-dialog-{{n.id}}" class="image-dialog">
+
+            <div class="top">
+                <a onclick="close_image_dialog({{n.id}});" class="close-image-dialog-button">
+                    <i class="fa-solid fa-xmark"></i>
+                </a>
+
+                <span>{{n.title}}</span>
+                {% if user.is_authenticated %}
+                <div class="tools">
+
+                    <a onclick="open_confirm_dialog({{n.id}}, 'remove');">
+                        <i class="fa fa-trash-o"></i>
+                    </a>
+                </div>
+                {% endif %}
+
+
+                <a download href="{{ n.file }}" class="download-image-button">
+                    <i class="fa-solid fa-download"></i>
+                </a>
+            </div>
+            <hr>
+
+            <img src="{{ n.file }}">
+
+
+        </dialog>
+
+        <div class="item-block">
+            <a  onclick="open_image_dialog({{n.id}});">
+
+
+                <img class="cover" src="{{ n.file }}">
+            </a>
+
+        </div>
+
+        {% endfor %}
+        {% else %}
+        <div class="is-empty">
+            <img src="static/images/empty-box-icon.svg"
+                 style="filter: invert(57%) sepia(6%) saturate(16%) hue-rotate(43deg) brightness(87%) contrast(89%);">
+            <p>Пока здесь пусто</p>
+
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+
+{% endblock %}
+
+
+</body>
+</html>

@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="20afb429-6d2f-4260-8491-b3f47e60edb9" name="Changes" comment="Небольшая правка стилей" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2Nq0C3AlrsI9k5vtZqJSUwU8RcN" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Arsbul Programming/Desktop/КДИ/app/templates/forms&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Arsbul Programming\Desktop\КДИ\app\templates\forms" />
+      <recent name="C:\Users\Arsbul Programming\Desktop\КДИ\app\static\css" />
+      <recent name="C:\Users\Arsbul Programming\Desktop\КДИ\app\templates" />
+      <recent name="C:\Users\Arsbul Programming\Desktop\дари добро\app\static\loaded_media" />
+      <recent name="C:\Users\Arsbul Programming\Desktop\дари добро" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Arsbul Programming\Desktop\дари добро\app\static\css" />
+      <recent name="C:\Users\Arsbul Programming\Desktop\дари добро\app\static\xml" />
+      <recent name="C:\Users\Arsbul Programming\Desktop\дари добро\app\templates\errors" />
+      <recent name="C:\Users\Arsbul Programming\Desktop\дари добро\app\templates" />
+      <recent name="C:\Users\Arsbul Programming\Desktop\дари добро\app" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.main">
+    <configuration name="dd" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="дари добро" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Downloads" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/Downloads/dd.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="дари добро" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\Arsbul Programming\AppData\Local\Programs\Python\Python310\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.dd" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="20afb429-6d2f-4260-8491-b3f47e60edb9" name="Changes" comment="" />
+      <created>1680376174457</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1680376174457</updated>
+      <workItem from="1680438160543" duration="237000" />
+      <workItem from="1683980423769" duration="594000" />
+      <workItem from="1685015487838" duration="3000" />
+    </task>
+    <task id="LOCAL-00001" summary="Адаптация,&#10;Вкладка контакты">
+      <created>1680878193592</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1680878193592</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Немного красоты">
+      <created>1680879817133</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1680879817133</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Адаптация почти всех страниц&#10;Пременён meta-тэг маштабирования&#10;Адаптация навигационной панели под мобмльное устройства">
+      <created>1681652776020</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1681652776021</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Адаптация почти всех страниц&#10;Пременён meta-тэг маштабирования&#10;Адаптация навигационной панели под мобмльное устройства&#10;+Исправление багов">
+      <created>1681710143092</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1681710143092</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Исправление багов с бд">
+      <created>1682062321320</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1682062321320</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Исправление багов с бд">
+      <created>1682485436152</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1682485436152</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Изменены названия шаблонов с русского на английский во избежание дальнейших багов.&#10;Исправлен баг с отображением страницы профиля, в том числе и на мобильных устройствах">
+      <created>1682487051598</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1682487051598</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Удалены некоторые страницы.&#10;Изменена страница &quot;404&quot;">
+      <created>1682487627077</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1682487627077</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Небольшой фикс  бага, связанного с отображением редактора текста">
+      <created>1682605881373</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1682605881373</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Доработка стилей форм">
+      <created>1682617495863</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1682617495863</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Исправлен баг с формой настройкой сайта">
+      <created>1682617549251</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1682617549251</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Исправлены некоторые баги&#10;Реализованно редактирование страниц: главная, стать опекуном, стать волонтёром и помочь финансово.&#10;Теперь для этого нужно войти в аккаунт и нажать на кнопку редактирования на соответствующей странице. &#10;Убрано редактирование текста главной страницы из страницы настроек сайта.">
+      <created>1682795387385</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1682795387385</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Исправлены некоторые баги.&#10;Добавлена страница с полезными материалами для просмотра + форма и страница для добавления и редактирования.&#10;Добавлена страница галереи, где можно просматривать фотографии и скачивать их + форма и страница для добавления и редактирования.&#10;Добавлена возможность редактировать добавляемые на сайт элементы: новости, животные, полезные материалы, партнёры, уставные документы, посты сми, фотографии.&#10;Добавлен файл &quot;admin_user.json&quot;, в котором хранится информация о базовом аккаунте администратора.">
+      <created>1684242617139</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1684242617139</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Немного подправлены страницы (оформление кода)">
+      <created>1684243181745</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1684243181745</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Добавлен файловый менеджер. &#10;Исправлена ошибка при переходе в настройки сайта.&#10;Добавлена анимация для вкладок верхней панели навигации.&#10;Исправлен визуальный баг с отображением подменю на верхней панели навигации на странице &quot;Контакты&quot; + исправлен баг с анимацией qr кода.&#10;Добавлена возможность удаления аккаунта. &#10;При нажатии кнопки выхода из профиля или при нажатии удаления появляется диалоговое окно с подтверждением действия.&#10;Добавлены мини-иконки на кнопках на панели администратора.">
+      <created>1684427630377</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1684427630377</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Доработана верхняя панель навигации и анимации кнопок на ней.&#10;Созданы анимации под кнопки инструментов, под кнопки просмотра документов и для кнопки &quot;Читать дальше&quot;.&#10;Исправлен баг с загрузкой стилей на страницах ошибок (404 и 500)&#10;Финальная версия проекта&#10;:D">
+      <created>1684445390464</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1684445390464</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Исправление багов и недочётов">
+      <created>1684446178315</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1684446178315</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Исправление багов и недочётов">
+      <created>1684446259477</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1684446259477</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Исправление багов и недочётов">
+      <created>1684483993898</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1684483993898</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Исправление багов.&#10;Добавлена возможность редактировать вкладку &quot;Контакты&quot;.&#10;Исправлены анимации у кнопок во вкладке &quot;Уставные документы&quot;.&#10;Изменено положение вкладки &quot;Полезные материалы&quot; на верхней панели навигации.&#10;Изменён дизайн диалоговых окон. &#10;Добавлен новый шрифт &quot;Open Sans&quot; от google.&#10;Переименована страница с названием &quot;Профиль&quot; на название &quot;Панель управления&quot;.&#10;Финальная версия проекта.">
+      <created>1684618257296</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1684618257296</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Исправление багов.">
+      <created>1684618332296</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1684618332296</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Исправление багов с текстом во вкладке &quot;Контакты&quot;.">
+      <created>1684619037045</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1684619037045</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Исправление багов с текстом во вкладке &quot;Контакты&quot;.">
+      <created>1684619341508</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1684619341508</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Исправление багов связанных с диалоговыми окнами и верхней панелью навигации на мобильных устройствах.">
+      <created>1684619430862</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1684619430862</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Подправка валидатора телефона">
+      <created>1684619887866</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1684619887866</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Подправка стилей">
+      <created>1684620177667</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1684620177667</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Исправление бага связанного с языком страниц (на некоторых был английский и google переводчик постоянно переводил русские страницы)&#10;Чистка проекта от лишних файлов">
+      <created>1684620541205</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1684620541205</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Исправление бага связанного с отображением новости">
+      <created>1684621038838</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1684621038838</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Исправление бага со стилем диалогового окна в галерее">
+      <created>1684621283931</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1684621283931</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Доработка стилей галереи">
+      <created>1684621536192</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1684621536192</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Исправление бага со стилями на странице &quot;Полезная информация&quot; + правка формы.">
+      <created>1684651924929</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1684651924929</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Исправление бага, связанного с новостями и с животными, изображение большого разрешения съезжало. + исправление бага с текстом под фотографиями. + правка стиля на странице просмотра 1 новости">
+      <created>1684844440546</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1684844440546</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Исправлен баг, связанный с сохранением фонового изображения.&#10;Правка стиля формы">
+      <created>1684947428896</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1684947428896</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Исправлен баг, связанный с ошибкой в файле __init__.py на хостинге">
+      <created>1684948061586</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1684948061586</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Добавлены страницы">
+      <created>1684948540583</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1684948540583</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Добавлен метатег">
+      <created>1684948622903</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1684948622903</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Добавлен файл sitemap">
+      <created>1684949210318</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1684949210318</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Добавлен файл sitemap">
+      <created>1684949315714</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1684949315714</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Добавлен файл sitemap">
+      <created>1684949520279</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1684949520279</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Исправлены баги. Правка стилей. Добавлено разделение животных на мальчиков и девочек, кошек и собак.">
+      <created>1685211797011</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1685211797011</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Добавлено отображение возраста животного">
+      <created>1685213014965</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1685213014965</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Добавлены анимации">
+      <created>1685272864085</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1685272864085</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Фиксы багов">
+      <created>1685649236646</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1685649236646</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Обновление иконки сайта">
+      <created>1685649825208</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1685649825208</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Добавлены файлы для сайта. &#10;Добавлена возможность редактировать название, сайта, отображаемое в поиске.">
+      <created>1685712094544</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1685712094544</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Небольшая правка стилей">
+      <created>1685890907192</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1685890907192</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Исправление багов и недочётов" />
+    <MESSAGE value="Исправление багов.&#10;Добавлена возможность редактировать вкладку &quot;Контакты&quot;.&#10;Исправлены анимации у кнопок во вкладке &quot;Уставные документы&quot;.&#10;Изменено положение вкладки &quot;Полезные материалы&quot; на верхней панели навигации.&#10;Изменён дизайн диалоговых окон. &#10;Добавлен новый шрифт &quot;Open Sans&quot; от google.&#10;Переименована страница с названием &quot;Профиль&quot; на название &quot;Панель управления&quot;.&#10;Финальная версия проекта." />
+    <MESSAGE value="Исправление багов." />
+    <MESSAGE value="Исправление багов с текстом во вкладке &quot;Контакты&quot;." />
+    <MESSAGE value="Исправление багов связанных с диалоговыми окнами и верхней панелью навигации на мобильных устройствах." />
+    <MESSAGE value="Подправка валидатора телефона" />
+    <MESSAGE value="Подправка стилей" />
+    <MESSAGE value="Исправление бага связанного с языком страниц (на некоторых был английский и google переводчик постоянно переводил русские страницы)&#10;Чистка проекта от лишних файлов" />
+    <MESSAGE value="Исправление бага связанного с отображением новости" />
+    <MESSAGE value="Исправление бага со стилем диалогового окна в галерее" />
+    <MESSAGE value="Доработка стилей галереи" />
+    <MESSAGE value="Исправление бага со стилями на странице &quot;Полезная информация&quot; + правка формы." />
+    <MESSAGE value="Исправление бага, связанного с новостями и с животными, изображение большого разрешения съезжало. + исправление бага с текстом под фотографиями. + правка стиля на странице просмотра 1 новости" />
+    <MESSAGE value="Исправлен баг, связанный с сохранением фонового изображения.&#10;Правка стиля формы" />
+    <MESSAGE value="Исправлен баг, связанный с ошибкой в файле __init__.py на хостинге" />
+    <MESSAGE value="Добавлены страницы" />
+    <MESSAGE value="Добавлен метатег" />
+    <MESSAGE value="Добавлен файл sitemap" />
+    <MESSAGE value="Исправлены баги. Правка стилей. Добавлено разделение животных на мальчиков и девочек, кошек и собак." />
+    <MESSAGE value="Добавлено отображение возраста животного" />
+    <MESSAGE value="Добавлены анимации" />
+    <MESSAGE value="Фиксы багов" />
+    <MESSAGE value="Обновление иконки сайта" />
+    <MESSAGE value="Добавлены файлы для сайта. &#10;Добавлена возможность редактировать название, сайта, отображаемое в поиске." />
+    <MESSAGE value="Небольшая правка стилей" />
+    <option name="LAST_COMMIT_MESSAGE" value="Небольшая правка стилей" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app/routes.py</url>
+          <line>333</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app/routes.py</url>
+          <line>396</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app/routes.py</url>
+          <line>79</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app/routes.py</url>
+          <line>78</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app/routes.py</url>
+          <line>300</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

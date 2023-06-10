@@ -1,0 +1,136 @@
+body {
+    background-color: white;
+}
+.title {
+    margin-top: 0!important;
+    margin-right: 10px;
+}
+.title-block {
+    display: flex;
+    margin-top: 50px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.contacts-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 500px;
+}
+
+.social-networks-list {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 500px;
+}
+.social-networks-list a{
+    width: 70%;
+}
+
+
+.contacts-info .info {
+
+    margin-bottom: 40px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.contacts-info .phone-number {
+
+    margin: 0 10px;
+    background-image: none;
+}
+.contacts-info p {
+    font-size: 21px;
+    text-align: center;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.contacts-info a {
+    font-size: 21px;
+    white-space: normal;
+    text-align: center;
+    transition: .5s ease-in-out;
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+}
+
+
+.contacts-info a:hover {
+
+    
+    background-size: 100% 2px;
+}
+
+
+
+.tools a {
+
+    font-size:24px!important;
+}
+.tools a:hover {
+    font-size:27px!important;
+}
+
+
+
+#contacts {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    align-items: center;
+    flex-direction: column;
+}
+#separator {
+    width: 300px;
+    border-radius: 25px;
+}
+.social-network {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 20px;
+    justify-content: center;
+    padding: 0 30px;
+    font-size: 20px;
+
+}
+.social-network i {
+    font-size: 30px;
+    margin: 20px;
+}
+#dzen {
+    border: 3px black solid;
+
+}
+#ok {
+    border: 3px #ed812b solid;
+    color: #ed812b;
+}
+#vk {
+    border: 3px #0077ff solid;
+    color: #0077ff;
+}
+
+.social-network p {
+
+}
+.social-network img {
+    margin: 20px;
+    width: 100px;
+    width: 30px;
+
+}
