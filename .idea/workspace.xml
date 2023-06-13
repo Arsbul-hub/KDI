@@ -4,27 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="20afb429-6d2f-4260-8491-b3f47e60edb9" name="Changes" comment="Фиксы багов, добавлен">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.db" beforeDir="false" afterPath="$PROJECT_DIR$/app.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/css/base.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/css/contacts.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/css/contacts.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/css/form.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/css/form.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/css/manure.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/css/manure.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/images/background_image.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/background_image.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/loaded_media/ts-aAOtBOTg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/for_sale_animals.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/for_sale_animals.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/forms/edit_contacts.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/forms/edit_contacts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/manure.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/manure.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/our_animals.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/our_animals.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-    </list>
+    <list default="true" id="20afb429-6d2f-4260-8491-b3f47e60edb9" name="Changes" comment="Добавлена страница &quot;Команда&quot;, где отображаются все люди, работающие на конюшне.&#10;Исправлен баг со стилем во вкладке &quot;Контакты&quot; на мобильных устройствах.&#10;Фиксы багов" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -475,7 +455,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686427440531</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="Добавлена страница &quot;Команда&quot;, где отображаются все люди, работающие на конюшне.&#10;Исправлен баг со стилем во вкладке &quot;Контакты&quot; на мобильных устройствах.&#10;Фиксы багов">
+      <created>1686689251656</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1686689251656</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -486,14 +473,25 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Исправление багов и недочётов" />
     <MESSAGE value="Исправление багов.&#10;Добавлена возможность редактировать вкладку &quot;Контакты&quot;.&#10;Исправлены анимации у кнопок во вкладке &quot;Уставные документы&quot;.&#10;Изменено положение вкладки &quot;Полезные материалы&quot; на верхней панели навигации.&#10;Изменён дизайн диалоговых окон. &#10;Добавлен новый шрифт &quot;Open Sans&quot; от google.&#10;Переименована страница с названием &quot;Профиль&quot; на название &quot;Панель управления&quot;.&#10;Финальная версия проекта." />
     <MESSAGE value="Исправление багов." />
     <MESSAGE value="Исправление багов с текстом во вкладке &quot;Контакты&quot;." />
@@ -518,7 +516,8 @@
     <MESSAGE value="Обновление иконки сайта" />
     <MESSAGE value="Добавлены файлы для сайта. &#10;Добавлена возможность редактировать название, сайта, отображаемое в поиске." />
     <MESSAGE value="Небольшая правка стилей" />
-    <option name="LAST_COMMIT_MESSAGE" value="Небольшая правка стилей" />
+    <MESSAGE value="Добавлена страница &quot;Команда&quot;, где отображаются все люди, работающие на конюшне.&#10;Исправлен баг со стилем во вкладке &quot;Контакты&quot; на мобильных устройствах.&#10;Фиксы багов" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлена страница &quot;Команда&quot;, где отображаются все люди, работающие на конюшне.&#10;Исправлен баг со стилем во вкладке &quot;Контакты&quot; на мобильных устройствах.&#10;Фиксы багов" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
