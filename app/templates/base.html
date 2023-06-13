@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css" href="/static/css/page.css">
     <link rel="stylesheet" type="text/css" href="/static/css/dialog.css">
     <link rel="stylesheet" type="text/css" href="/static/css/animations.css">
+
     <!--Скрипты-->
     <script type="text/javascript" src="/static/js/dialog.js"></script>
     <script type="text/javascript" src="/static/js/base.js"></script>
@@ -27,7 +28,7 @@
 <div id="before">
     {% block before %}{% endblock %}
 </div>
-<div class="l-wrap js-wrap">
+<div style="position: relative">
 
 
     <div class="nav-menu" id="desktop">
@@ -45,16 +46,17 @@
                             <li><a href="{{ url_for('gallery') }}">Галерея</a></li>
                         </ul>
                     </li>
-                    <li><a href="{{url_for('our_animals')}}">НАШИ ЖИВОТНЫЕ</a></li>
+                    <li><a href="{{url_for('team')}}">КОМАНДА</a></li>
+                    <li><a href="{{url_for('our_animals')}}">НАШИ ЛОШАДИ</a></li>
                     <li><a href="{{url_for('for_sale_animals')}}">ЛОШАДИ НА ПРОАДЖЕ</a></li>
 
                     <li><a href="{{url_for('news')}}">НОВОСТИ</a></li>
                     <li><a>УСЛУГИ</a>
                         <ul class="submenu">
-                            <li><a href="{{url_for('horse_riding')}}">КАТАНИЕ НА ЛОШАДЯХ</a></li>
-                            <li><a href="{{url_for('crew_riding')}}">ПРОГУЛКИ В ЭКИПАЖЕ</a></li>
+                            <li><a href="{{url_for('horse_riding')}}">ПРОГУЛКИ НА ЛОШАДЯХ</a></li>
+                            <li><a href="{{url_for('crew_riding')}}">КАТАНИЕ В ЭКИПАЖЕ</a></li>
                             <li><a href="{{url_for('hippotherapy')}}">ИППОТЕРАПИЯ</a></li>
-                            <li><a href="{{url_for('index')}}">КОНСКИЙ НАВОЗ</a></li>
+                            <li><a href="{{url_for('manure')}}">КОНСКИЙ НАВОЗ</a></li>
                         </ul>
                     </li>
 
@@ -96,16 +98,17 @@
                             <li><a href="{{ url_for('gallery') }}">Галерея</a></li>
                         </ul>
                     </li>
-                    <li><a href="{{url_for('our_animals')}}">НАШИ ЖИВОТНЫЕ</a></li>
+                    <li><a href="{{url_for('team')}}">КОМАНДА</a></li>
+                    <li><a href="{{url_for('our_animals')}}">НАШИ ЛОШАДИ</a></li>
                     <li><a href="{{url_for('for_sale_animals')}}">ЛОШАДИ НА ПРОАДЖЕ</a></li>
 
                     <li><a href="{{url_for('news')}}">НОВОСТИ</a></li>
                     <li><a>УСЛУГИ</a>
                         <ul class="submenu">
-                            <li><a href="{{url_for('horse_riding')}}">КАТАНИЕ НА ЛОШАДЯХ</a></li>
-                            <li><a href="{{url_for('crew_riding')}}">ПРОГУЛКИ В ЭКИПАЖЕ</a></li>
+                            <li><a href="{{url_for('horse_riding')}}">ПРОГУЛКИ НА ЛОШАДЯХ</a></li>
+                            <li><a href="{{url_for('crew_riding')}}">КАТАНИЕ В ЭКИПАЖЕ</a></li>
                             <li><a href="{{url_for('hippotherapy')}}">ИППОТЕРАПИЯ</a></li>
-                            <li><a href="{{url_for('index')}}">КОНСКИЙ НАВОЗ</a></li>
+                            <li><a href="{{url_for('manure')}}">КОНСКИЙ НАВОЗ</a></li>
                         </ul>
                     </li>
 
@@ -129,9 +132,8 @@
     <div id="after">
         {% block after %}{% endblock %}
     </div>
-    <div id="bottom-panel">
 
-    </div>
+
 </div>
 
 

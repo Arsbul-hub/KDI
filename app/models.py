@@ -89,3 +89,11 @@ class PagesData(__basemodel):
     page = sa.Column(sa.String, primary_key=True)
     title = sa.Column(sa.String)
     description = sa.Column(sa.String)
+
+
+class Team(__basemodel):
+    __tablename__ = 'team'
+    id = sa.Column(sa.Integer, primary_key=True)
+    name = sa.Column(sa.String)
+    avatar = sa.Column(sa.String)
+    person_type = sa.Column(sa.String)

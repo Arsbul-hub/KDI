@@ -166,3 +166,19 @@ class EditContacts(FlaskForm):
     def validate_vk_qr(self, field):
         if not Config.query.get("vk_group_qr"):
             raise ValidationError("This field is require.")
+
+
+class AddPersonForm(FlaskForm):
+    _name = "Добавить участника"
+    name = StringField("Имя и фамилия:", validators=[DataRequired()])
+    avatar = FileField("Фотография:", validators=[DataRequired(), image_validation])
+    person_type = SelectField("Тип", choices=[("student", "Участник"), ("teacher", "Тренер")], validators=[DataRequired()])
+    submit = SubmitField("Добавить")
+
+
+class EditPersonForm(FlaskForm):
+    _name = "Изменить участника"
+    name = StringField("Имя и фамилия:")
+    avatar = FileField("Фотография:", validators=[image_validation])
+    person_type = SelectField("Тип", choices=[("student", "Участник"), ("teacher", "Тренер")])
+    submit = SubmitField("Сохранить")

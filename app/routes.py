@@ -105,7 +105,6 @@ def remove_file(path):
 
 
 @app.route('/')
-@app.route("/index")
 def index():
     data = PagesData.query.get("index")
     allow_background_image = False
@@ -123,8 +122,8 @@ def logout():
     return redirect("/")
 
 
-@login_required
 @app.route("/delete_user")
+@login_required
 def delete_user():
     user = User.query.get(request.args.get("id"))
     if user and user.username != app.config["DEFAULT_ADMIN_USERNAME"]:
@@ -183,9 +182,10 @@ def site_settings():
     form = ConfigForm()
 
     if form.validate_on_submit():
-
-        save_file(file=form.site_logo.data, service_path="images", name="logo.png")
-        save_file(file=form.background_image.data, service_path="images", name="background_image.png")
+        if form.site_logo.data:
+            save_file(file=form.site_logo.data, service_path="images", name="logo.png")
+        if form.background_image.data:
+            save_file(file=form.background_image.data, service_path="images", name="background_image.png")
 
         Config.query.get("allow_background_image").value = form.allow_background_image.data
         Config.query.get("site_name").value = form.site_name.data
@@ -202,16 +202,8 @@ def site_settings():
     return render_template("forms/site_settings.html", user=current_user, config=Config, form=form)
 
 
-# @login_required
-# @app.route("/Файловый менеджер")
-# def file_manager():
-#     filemanager_link = url_for('flaskfilemanager.index')
-#     print(filemanager_link)
-#     return redirect(filemanager_link)
-
-
-@login_required
 @app.route("/edit_page_description", methods=["GET", "POST"])
+@login_required
 def edit_page_description():
     form = PageDataForm()
     page = request.args.get("page")
@@ -392,8 +384,8 @@ def gallery():
     return render_template("gallery.html", user=current_user, gallery_list=Gallery.query.all())
 
 
-@login_required
 @app.route("/edit_contacts", methods=["GET", "POST"])
+@login_required
 def edit_contacts():
     form = EditContacts()
     if form.validate_on_submit():
@@ -418,8 +410,8 @@ def edit_contacts():
 
         if Config.query.filter_by(category="contacts").all():
             form.email.data = Config.query.get("email").value
-            form.phone_1.data = Config.query.get("phone_number_1").value
-            form.phone_2.data = Config.query.get("phone_number_2").value
+            form.phone_1.data = Config.query.get("phone_1").value
+            form.phone_2.data = Config.query.get("phone_2").value
             form.vk.data = Config.query.get("vk_url").value
             # form.ok.data = Config.query.get("ok_url").value
             # form.dzen.data = Config.query.get("dzen_url").value
@@ -437,6 +429,56 @@ def contacts():
         # ok = Config.query.get("ok_url").value
         # dzen = Config.query.get("dzen_url").value
     return render_template("contacts.html", user=current_user, vk=vk, email=email, phone_1=phone_1, phone_2=phone_2)
+
+
+@app.route("/add_person_to_team", methods=['GET', 'POST'])
+@login_required
+def add_person():
+    action = request.args.get("action")
+
+    form = AddPersonForm()
+    if action == "edit":
+        form = EditPersonForm()
+        person = Team.query.get(request.args.get("id"))
+        if person:
+            if form.validate_on_submit():
+                person.name = form.name.data
+                person.person_type = form.person_type.data
+                if form.avatar.data:
+                    person.avatar = save_file(form.avatar.data)
+                db.session.commit()
+                return redirect(request.args.get("previous"))
+            else:
+                form.name.data = person.name
+                form.person_type.data = person.person_type
+        else:
+            return redirect(request.args.get("previous"))
+    elif form.validate_on_submit():
+        out_path = save_file(file=form.avatar.data)
+
+        new_person = Team(name=form.name.data, avatar=out_path, person_type=form.person_type.data)
+        db.session.add(new_person)
+        db.session.commit()
+
+        return redirect(request.args.get("previous"))
+    return render_template("forms/add_person.html", user=current_user, form=form)
+
+
+@app.route('/team')
+def team():
+    action = request.args.get('action')
+    if current_user.is_authenticated and action:
+        if action == "remove":
+            db.session.delete(Team.query.get(request.args.get('id')))
+
+            db.session.commit()
+
+        return redirect(request.args.get("previous"))
+
+    team = Team.query.all()
+
+    return render_template("team.html", BeautifulSoup=BeautifulSoup, team=team,
+                           user=current_user)
 
 
 @app.route("/horse_riding")

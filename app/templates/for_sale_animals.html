@@ -13,7 +13,7 @@
 
     <script type="text/javascript" src="/static/js/dialog.js"></script>
 
-    <title>Лошадки на продаже</title>
+    <title>Лошади на продаже</title>
 
     {% endblock %}
 </head>
@@ -22,7 +22,7 @@
 {% block after %}
 
 
-<p class="title">Лошадки на продаже</p>
+<p class="title">Лошади на продаже</p>
 
 {% if user.is_authenticated %}
 
@@ -34,23 +34,7 @@
     <div class="animals-list" id="not-deleted">
         {% if animals %}
         {% for animal in animals %}
-        <dialog id="confirm-dialog-{{animal.id}}-remove" class="confirm-dialog">
 
-            <p class="dialog-title">Вы действительно хотите удалить это животное?</p>
-            <hr>
-            <div class="buttons">
-                <a onclick="close_confirm_dialog({{animal.id}}, 'remove');">Отмена</a>
-                <a href="{{url_for('our_animals', action='remove',  id=animal.id, previous=request.full_path)}}">Да</a>
-            </div>
-        </dialog>
-        <dialog id="confirm-dialog-{{animal.id}}-move" class="confirm-dialog">
-            <p class="dialog-title">Вы действительно хотите отправить это животное домой?</p>
-            <hr>
-            <div class="buttons">
-                <a onclick="close_confirm_dialog({{animal.id}}, 'move');">Отмена</a>
-                <a href="{{url_for('our_animals', action='move_to_house',  id=animal.id)}}">Да</a>
-            </div>
-        </dialog>
         <dialog id="image-dialog-{{animal.id}}" class="image-dialog">
 
             <a onclick="close_image_dialog({{animal.id}});" class="close-image-dialog-button">
@@ -83,9 +67,6 @@
 
             <div class="tools">
 
-                <a onclick="open_confirm_dialog({{animal.id}}, 'move');">
-                    <i class="fa-solid fa-shield-dog"></i>
-                </a>
                 <a href="{{url_for('add_animal', action='edit', id=animal.id, previous=request.full_path)}}">
                     <i class="fa-solid fa-pen"></i>
                 </a>

@@ -34,23 +34,7 @@
     <div class="manure-list" id="not-deleted">
         {% if manure_types %}
         {% for manure in manure_types %}
-        <dialog id="confirm-dialog-{{manure.id}}-remove" class="confirm-dialog">
 
-            <p class="dialog-title">Вы действительно хотите удалить это животное?</p>
-            <hr>
-            <div class="buttons">
-                <a onclick="close_confirm_dialog({{manure.id}}, 'remove');">Отмена</a>
-                <a href="{{url_for('manure', action='remove',  id=manure.id, previous=request.full_path)}}">Да</a>
-            </div>
-        </dialog>
-        <dialog id="confirm-dialog-{{manure.id}}-move" class="confirm-dialog">
-            <p class="dialog-title">Вы действительно хотите отправить это животное домой?</p>
-            <hr>
-            <div class="buttons">
-                <a onclick="close_confirm_dialog({{manure.id}}, 'move');">Отмена</a>
-                <a href="{{url_for('manure', action='move_to_house',  id=manure.id)}}">Да</a>
-            </div>
-        </dialog>
         <dialog id="image-dialog-{{manure.id}}" class="image-dialog">
 
             <a onclick="close_image_dialog({{manure.id}});" class="close-image-dialog-button">
@@ -83,9 +67,6 @@
 
             <div class="tools">
 
-                <a onclick="open_confirm_dialog({{manure.id}}, 'move');">
-                    <i class="fa-solid fa-shield-dog"></i>
-                </a>
                 <a href="{{url_for('add_manure_type', action='edit', id=manure.id, previous=request.full_path)}}">
                     <i class="fa-solid fa-pen"></i>
                 </a>
@@ -102,7 +83,11 @@
                 <div class="manure">
                     <div class="title-block">
                         <span>{{ manure.name }}</span>
-
+                        {% if manure.in_stock %}
+                        <span class="in_stock" style="color: green; font-size: 16px;">в наличии</span>
+                        {% else %}
+                        <span class="in_stock" style="color: red; font-size: 16px;">не в наличии</span>
+                        {% endif %}
                     </div>
 
                     <hr>
