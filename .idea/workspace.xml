@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="20afb429-6d2f-4260-8491-b3f47e60edb9" name="Changes" comment="123">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/passenger_wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/passenger_wsgi.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,13 +127,6 @@
       <workItem from="1680438160543" duration="237000" />
       <workItem from="1683980423769" duration="594000" />
       <workItem from="1685015487838" duration="3000" />
-    </task>
-    <task id="LOCAL-00003" summary="Адаптация почти всех страниц&#10;Пременён meta-тэг маштабирования&#10;Адаптация навигационной панели под мобмльное устройства">
-      <created>1681652776020</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1681652776021</updated>
     </task>
     <task id="LOCAL-00004" summary="Адаптация почти всех страниц&#10;Пременён meta-тэг маштабирования&#10;Адаптация навигационной панели под мобмльное устройства&#10;+Исправление багов">
       <created>1681710143092</created>
@@ -474,7 +464,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686910518060</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="123">
+      <created>1686916656412</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1686916656412</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
