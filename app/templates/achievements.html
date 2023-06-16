@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+{% extends "base.html" %}
+
+<head>
+
+    {% block head %}
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/static/css/achievements.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/navigation.css">
+
+    <title>Достижения</title>
+
+    {% endblock %}
+</head>
+
+<body>
+
+
+{% block after %}
+
+<span class="title">Наши достижения</span>
+{% if user.is_authenticated %}
+
+<a class="add_button" href="{{url_for('add_achievement')}}">Добавить достижение</a>
+
+
+{% endif %}
+
+<div id="achievements-blocks">
+
+
+    <div class="achievements-list">
+        {% if achievements %}
+        {% for a in achievements %}
+        <dialog id="confirm-dialog-{{a.id}}-remove" class="confirm-dialog">
+
+            <p class="dialog-title">Вы действительно хотите удалить это достижение?</p>
+            <hr>
+            <div class="buttons">
+                <a onclick="close_confirm_dialog({{a.id}}, 'remove');">Отмена</a>
+                <a href="{{url_for('achievements', action='remove', id=a.id)}}">Да</a>
+            </div>
+
+
+        </dialog>
+
+        <div class="item-block">
+
+            {% if (a.timestamp.year, a.timestamp.month, a.timestamp.day) == (today.year, today.month, today.day) %}
+            <span class="achievement-date" style="color: red;">Сегодня</span>
+            {% elif (a.timestamp.year, a.timestamp.month, a.timestamp.day) == (today.year, today.month, today.day - 1)
+            %}
+            <span class="achievement-date">Вчера</span>
+            {% else %}
+            <span class="achievement-date">{{morph.parse(a.timestamp.strftime("%d %B"))[0].inflect(case).word + " " + a.timestamp.strftime("%Y года")}} </span>
+            {% endif %}
+            {% if user.is_authenticated %}
+
+
+            <div class="tools">
+                <a href="{{url_for('add_achievement', action='edit', id=a.id)}}">
+                    <i class="fa-solid fa-pen"></i>
+                </a>
+                <a onclick="open_confirm_dialog({{a.id}}, 'remove');">
+                    <i class="fa fa-trash-o"></i>
+                </a>
+            </div>
+            {% endif %}
+
+            <div class="content">
+
+
+                <div class="achievement">
+                    <span class="title-block">{{ a.title }}</span>
+                    <hr>
+                    <p class="achievement-body">
+                        <!--                        Текст новости чисто без разметки -->
+
+                        {{ BeautifulSoup(a.body, 'lxml').get_text()}}
+
+                    </p>
+                    <a class="view-all" href="{{url_for('achievements', action='show', id=a.id)}}">Читать дальше</a>
+                </div>
+
+
+            </div>
+
+        </div>
+
+        {% endfor %}
+        {% else %}
+        <div class="is-empty">
+            <img src="static/images/empty-box-icon.svg"
+                 style="filter: invert(57%) sepia(6%) saturate(16%) hue-rotate(43deg) brightness(87%) contrast(89%);">
+            <p>Пока здесь пусто</p>
+
+        </div>
+        {% endif %}
+    </div>
+
+</div>
+
+
+{% endblock %}
+
+
+</body>
+</html>

@@ -73,6 +73,20 @@ class EditNewsForm(FlaskForm):
     submit = SubmitField("Сохранить")
 
 
+class CreateAchievementsForm(FlaskForm):
+    _name = "Создать достижения"
+    title = StringField("Название кск:", validators=[DataRequired()])
+    body = CKEditorField("Текст:", validators=[DataRequired()])
+    submit = SubmitField("Опубликовать")
+
+
+class EditAchievementsForm(FlaskForm):
+    _name = "Изменить достижения"
+    title = StringField("Название кск:")
+    body = CKEditorField("Текст:")
+    submit = SubmitField("Сохранить")
+
+
 class AddAnimalForm(FlaskForm):
     _name = "Добавить животное"
     name = StringField("Кличка нового животного:", validators=[DataRequired()])
@@ -172,7 +186,8 @@ class AddPersonForm(FlaskForm):
     _name = "Добавить участника"
     name = StringField("Имя и фамилия:", validators=[DataRequired()])
     avatar = FileField("Фотография:", validators=[DataRequired(), image_validation])
-    person_type = SelectField("Тип", choices=[("student", "Участник"), ("teacher", "Тренер")], validators=[DataRequired()])
+    person_type = SelectField("Тип", choices=[("student", "Участник"), ("teacher", "Тренер")],
+                              validators=[DataRequired()])
     submit = SubmitField("Добавить")
 
 

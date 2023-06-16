@@ -285,6 +285,53 @@ def news():
                            case={"gent"})
 
 
+@app.route("/add_achievement", methods=['GET', 'POST'])
+@login_required
+def add_achievement():
+    action = request.args.get("action")
+
+    form = CreateAchievementsForm()
+    if action == "edit":
+        form = EditAchievementsForm()
+        achievement = Achievements.query.get(request.args.get("id"))
+        if achievement:
+            if form.validate_on_submit():
+                achievement.title = form.title.data
+                achievement.body = form.body.data
+                db.session.commit()
+                return redirect(url_for("achievements"))
+            else:
+                form.title.data = achievement.title
+                form.body.data = achievement.body
+        else:
+            return redirect(url_for("achievements"))
+    elif form.validate_on_submit():
+        achievement = Achievements(title=form.title.data, body=form.body.data)
+        db.session.add(achievement)
+        db.session.commit()
+        return redirect(url_for("achievements"))
+    return render_template("forms/add_achievement.html", user=current_user, form=form)
+
+
+@app.route("/achievements")
+def achievements():
+    action = request.args.get('action')
+    if action == "show":
+        achievement = Achievements.query.get(request.args.get('id'))
+        return render_template("show_achievement.html", user=current_user, achievement=achievement)
+    elif current_user.is_authenticated and action == "remove":
+        achievement = Achievements.query.get(request.args.get('id'))
+        remove_file(achievement.cover)
+        db.session.delete(achievement)
+
+        db.session.commit()
+        return redirect(url_for("achievements"))
+    achievements = Achievements.query.all()
+    return render_template("achievements.html", user=current_user, BeautifulSoup=BeautifulSoup, achievements=achievements,
+                           morph=morph, today=datetime.today(),
+                           case={"gent"})
+
+
 @app.route("/add_horse", methods=['GET', 'POST'])
 @login_required
 def add_animal():

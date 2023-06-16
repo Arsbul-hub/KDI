@@ -29,11 +29,18 @@ class User(UserMixin, __basemodel):
 class News(__basemodel, SerializerMixin):
     __tablename__ = 'news'
     id = sa.Column(sa.Integer, primary_key=True)
-    body = sa.Column(sa.String())
     title = sa.Column(sa.String())
+    body = sa.Column(sa.String())
     cover = sa.Column(sa.String())
     timestamp = sa.Column(sa.DateTime, index=True, default=datetime.utcnow)
-    deleted = sa.Column(sa.Boolean, default=False)
+
+
+class Achievements(__basemodel, SerializerMixin):
+    __tablename__ = 'achievements'
+    id = sa.Column(sa.Integer, primary_key=True)
+    title = sa.Column(sa.String())
+    body = sa.Column(sa.String())
+    timestamp = sa.Column(sa.DateTime, index=True, default=datetime.utcnow)
 
 
 class Partners(__basemodel):

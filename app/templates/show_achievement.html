@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+{% extends "base.html" %}
+
+<head>
+
+    {% block head %}
+
+    <meta charset="UTF-8">
+    <title>Достижение</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/view_achievement.css">
+
+
+    {% endblock %}
+</head>
+
+<body>
+
+
+{% block after %}
+{% if user.is_authenticated %}
+<dialog id="confirm-dialog-{{achievement.id}}-remove" class="confirm-dialog">
+
+    <p class="dialog-title">Вы действительно хотите удалить это достижение?</p>
+    <hr>
+    <div class="buttons">
+        <a onclick="close_confirm_dialog({{achievement.id}}, 'remove');">Отмена</a>
+        <a href="{{url_for('achievements', action='remove', id=achievement.id)}}">Да</a>
+    </div>
+
+
+</dialog>
+
+
+<div class="tools">
+    <a href="{{url_for('add_achievement', action='edit', id=achievement.id)}}">
+        <i class="fa-solid fa-pen"></i>
+    </a>
+    <a onclick="open_confirm_dialog({{achievement.id}}, 'remove');">
+        <i class="fa fa-trash-o"></i>
+    </a>
+</div>
+{% endif %}
+<div class="achievement-content">
+
+
+
+
+    <div class="achievement">
+        <span class="title-block">{{ achievement.title }}</span>
+        <hr>
+        <div class="achievement-body">{{ achievement.body|safe }}</div>
+
+    </div>
+
+
+</div>
+{% endblock %}
+</body>
+</html>

@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="20afb429-6d2f-4260-8491-b3f47e60edb9" name="Changes" comment="Добавлена страница &quot;Команда&quot;, где отображаются все люди, работающие на конюшне.&#10;Исправлен баг со стилем во вкладке &quot;Контакты&quot; на мобильных устройствах.&#10;Фиксы багов" />
+    <list default="true" id="20afb429-6d2f-4260-8491-b3f47e60edb9" name="Changes" comment="Фикс багов во вкладке &quot;Контакты&quot;">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.db" beforeDir="false" afterPath="$PROJECT_DIR$/app.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/css/view_news.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/css/view_news.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/images/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/favicon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/base.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,29 +39,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Arsbul Programming/Desktop/КДИ/app/static/css&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Arsbul Programming/Desktop/КДИ/app/static/css",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Arsbul Programming\Desktop\КДИ\app\static\css" />
-      <recent name="C:\Users\Arsbul Programming\Desktop\КДИ\app\templates" />
       <recent name="C:\Users\Arsbul Programming\Desktop\КДИ\app\templates\forms" />
+      <recent name="C:\Users\Arsbul Programming\Desktop\КДИ\app\templates" />
       <recent name="C:\Users\Arsbul Programming\Desktop\дари добро\app\static\loaded_media" />
       <recent name="C:\Users\Arsbul Programming\Desktop\дари добро" />
     </key>
@@ -462,7 +471,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686689251656</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Фикс багов во вкладке &quot;Контакты&quot;">
+      <created>1686689881832</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1686689881832</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -492,7 +508,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Исправление багов.&#10;Добавлена возможность редактировать вкладку &quot;Контакты&quot;.&#10;Исправлены анимации у кнопок во вкладке &quot;Уставные документы&quot;.&#10;Изменено положение вкладки &quot;Полезные материалы&quot; на верхней панели навигации.&#10;Изменён дизайн диалоговых окон. &#10;Добавлен новый шрифт &quot;Open Sans&quot; от google.&#10;Переименована страница с названием &quot;Профиль&quot; на название &quot;Панель управления&quot;.&#10;Финальная версия проекта." />
     <MESSAGE value="Исправление багов." />
     <MESSAGE value="Исправление багов с текстом во вкладке &quot;Контакты&quot;." />
     <MESSAGE value="Исправление багов связанных с диалоговыми окнами и верхней панелью навигации на мобильных устройствах." />
@@ -517,14 +532,15 @@
     <MESSAGE value="Добавлены файлы для сайта. &#10;Добавлена возможность редактировать название, сайта, отображаемое в поиске." />
     <MESSAGE value="Небольшая правка стилей" />
     <MESSAGE value="Добавлена страница &quot;Команда&quot;, где отображаются все люди, работающие на конюшне.&#10;Исправлен баг со стилем во вкладке &quot;Контакты&quot; на мобильных устройствах.&#10;Фиксы багов" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлена страница &quot;Команда&quot;, где отображаются все люди, работающие на конюшне.&#10;Исправлен баг со стилем во вкладке &quot;Контакты&quot; на мобильных устройствах.&#10;Фиксы багов" />
+    <MESSAGE value="Фикс багов во вкладке &quot;Контакты&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Фикс багов во вкладке &quot;Контакты&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app/routes.py</url>
-          <line>326</line>
+          <line>373</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -539,7 +555,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app/routes.py</url>
-          <line>293</line>
+          <line>340</line>
           <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
