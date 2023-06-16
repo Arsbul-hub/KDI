@@ -5,7 +5,7 @@ from urllib.parse import urlsplit
 
 from flask import render_template, send_from_directory, url_for, flash, redirect, request
 from flask_ckeditor import upload_fail, upload_success
-from app import app, morph
+from app import application, morph
 from PIL import Image
 from flask_login import current_user, login_user, logout_user, login_required
 from app.models import *
@@ -30,23 +30,23 @@ def load_user(user_id):
     return User.query.get(int(user_id))
 
 
-@app.route('/files/<path:filename>')
+@application.route('/files/<path:filename>')
 def uploaded_files(filename):
     return send_from_directory("static/loaded_media", filename)
 
 
-@app.route('/reload_auth')
+@application.route('/reload_auth')
 def reload_auth_system():
     messages = ["Конфигурационный файл аутентификации пользователей был перезагружен!"]
     admin = User.query.filter_by(username="Admin").first()
     if admin:
-        admin.username = app.config["DEFAULT_ADMIN_USERNAME"]
-        admin.set_password(app.config["DEFAULT_ADMIN_PASSWORD"])
+        admin.username = application.config["DEFAULT_ADMIN_USERNAME"]
+        admin.set_password(application.config["DEFAULT_ADMIN_PASSWORD"])
 
     else:
         admin = User()
-        admin.username = app.config["DEFAULT_ADMIN_USERNAME"]
-        admin.set_password(app.config["DEFAULT_ADMIN_PASSWORD"])
+        admin.username = application.config["DEFAULT_ADMIN_USERNAME"]
+        admin.set_password(application.config["DEFAULT_ADMIN_PASSWORD"])
         db.session.add(admin)
 
     db.session.commit()
@@ -55,7 +55,7 @@ def reload_auth_system():
     return render_template("service/Уведомление.html", title="Внимание", messages=messages)
 
 
-@app.route('/upload', methods=['POST', "GET"])
+@application.route('/upload', methods=['POST', "GET"])
 def upload():
     f = request.files.get('upload')
     # Add more validations here
@@ -104,7 +104,7 @@ def remove_file(path):
         os.remove("app/" + path)
 
 
-@app.route('/')
+@application.route('/')
 def index():
     data = PagesData.query.get("index")
     allow_background_image = False
@@ -116,24 +116,24 @@ def index():
                            allow_background_image=allow_background_image)
 
 
-@app.route('/logout')
+@application.route('/logout')
 def logout():
     logout_user()
     return redirect("/")
 
 
-@app.route("/delete_user")
+@application.route("/delete_user")
 @login_required
 def delete_user():
     user = User.query.get(request.args.get("id"))
-    if user and user.username != app.config["DEFAULT_ADMIN_USERNAME"]:
+    if user and user.username != application.config["DEFAULT_ADMIN_USERNAME"]:
         logout_user()
         db.session.delete(user)
         db.session.commit()
     return redirect("/")
 
 
-@app.route('/login', methods=['GET', 'POST'])
+@application.route('/login', methods=['GET', 'POST'])
 def login():
     form = LoginForm()
 
@@ -154,7 +154,7 @@ def login():
     return render_template('forms/login.html', user=current_user, title='Sign In', form=form)
 
 
-@app.route('/register', methods=['GET', 'POST'])
+@application.route('/register', methods=['GET', 'POST'])
 @login_required
 def register():
     form = RegistrationForm()
@@ -170,13 +170,13 @@ def register():
     return render_template('forms/register.html', user=current_user, title='Register', form=form)
 
 
-@app.route("/admin_panel")
+@application.route("/admin_panel")
 @login_required
 def admin_panel():
-    return render_template("admin_panel.html", user=current_user, admin_username=app.config["DEFAULT_ADMIN_USERNAME"])
+    return render_template("admin_panel.html", user=current_user, admin_username=application.config["DEFAULT_ADMIN_USERNAME"])
 
 
-@app.route("/site_settings", methods=["GET", "POST"])
+@application.route("/site_settings", methods=["GET", "POST"])
 @login_required
 def site_settings():
     form = ConfigForm()
@@ -202,7 +202,7 @@ def site_settings():
     return render_template("forms/site_settings.html", user=current_user, config=Config, form=form)
 
 
-@app.route("/edit_page_description", methods=["GET", "POST"])
+@application.route("/edit_page_description", methods=["GET", "POST"])
 @login_required
 def edit_page_description():
     form = PageDataForm()
@@ -228,7 +228,7 @@ def edit_page_description():
     return render_template("forms/edit_page_description.html", user=current_user, form=form, page_name=page_name)
 
 
-@app.route("/add_news", methods=['GET', 'POST'])
+@application.route("/add_news", methods=['GET', 'POST'])
 @login_required
 def add_news():
     action = request.args.get("action")
@@ -260,7 +260,7 @@ def add_news():
     return render_template("forms/add_news.html", user=current_user, form=form)
 
 
-@app.route("/news")
+@application.route("/news")
 def news():
     action = request.args.get('action')
     if action == "show":
@@ -285,7 +285,7 @@ def news():
                            case={"gent"})
 
 
-@app.route("/add_achievement", methods=['GET', 'POST'])
+@application.route("/add_achievement", methods=['GET', 'POST'])
 @login_required
 def add_achievement():
     action = request.args.get("action")
@@ -313,7 +313,7 @@ def add_achievement():
     return render_template("forms/add_achievement.html", user=current_user, form=form)
 
 
-@app.route("/achievements")
+@application.route("/achievements")
 def achievements():
     action = request.args.get('action')
     if action == "show":
@@ -332,7 +332,7 @@ def achievements():
                            case={"gent"})
 
 
-@app.route("/add_horse", methods=['GET', 'POST'])
+@application.route("/add_horse", methods=['GET', 'POST'])
 @login_required
 def add_animal():
     action = request.args.get("action")
@@ -367,7 +367,7 @@ def add_animal():
     return render_template("forms/add_animal.html", user=current_user, form=form)
 
 
-@app.route('/our_horses')
+@application.route('/our_horses')
 def our_animals():
     action = request.args.get('action')
     if current_user.is_authenticated and action:
@@ -384,7 +384,7 @@ def our_animals():
                            user=current_user)
 
 
-@app.route('/for_sale_horses')
+@application.route('/for_sale_horses')
 def for_sale_animals():
     action = request.args.get('action')
     if current_user.is_authenticated and action:
@@ -401,7 +401,7 @@ def for_sale_animals():
                            user=current_user)
 
 
-@app.route("/add_image", methods=['GET', 'POST'])
+@application.route("/add_image", methods=['GET', 'POST'])
 @login_required
 def add_image_to_gallery():
     action = request.args.get("action")
@@ -416,7 +416,7 @@ def add_image_to_gallery():
     return render_template("forms/add_image.html", user=current_user, form=form)
 
 
-@app.route("/gallery")
+@application.route("/gallery")
 def gallery():
     action = request.args.get('action')
     if current_user.is_authenticated and action:
@@ -431,7 +431,7 @@ def gallery():
     return render_template("gallery.html", user=current_user, gallery_list=Gallery.query.all())
 
 
-@app.route("/edit_contacts", methods=["GET", "POST"])
+@application.route("/edit_contacts", methods=["GET", "POST"])
 @login_required
 def edit_contacts():
     form = EditContacts()
@@ -465,7 +465,7 @@ def edit_contacts():
     return render_template("forms/edit_contacts.html", user=current_user, form=form)
 
 
-@app.route("/contacts")
+@application.route("/contacts")
 def contacts():
     email, phone_1, phone_2, vk = "", "", "", ""
     if Config.query.filter_by(category="contacts").all():
@@ -478,7 +478,7 @@ def contacts():
     return render_template("contacts.html", user=current_user, vk=vk, email=email, phone_1=phone_1, phone_2=phone_2)
 
 
-@app.route("/add_person_to_team", methods=['GET', 'POST'])
+@application.route("/add_person_to_team", methods=['GET', 'POST'])
 @login_required
 def add_person():
     action = request.args.get("action")
@@ -511,7 +511,7 @@ def add_person():
     return render_template("forms/add_person.html", user=current_user, form=form)
 
 
-@app.route('/team')
+@application.route('/team')
 def team():
     action = request.args.get('action')
     if current_user.is_authenticated and action:
@@ -528,28 +528,28 @@ def team():
                            user=current_user)
 
 
-@app.route("/horse_riding")
+@application.route("/horse_riding")
 def horse_riding():
     data = PagesData.query.get("horse_riding")
 
     return render_template("horse_riding.html", user=current_user, site_data=data)
 
 
-@app.route("/crew_riding")
+@application.route("/crew_riding")
 def crew_riding():
     data = PagesData.query.get("crew_riding")
 
     return render_template("crew_riding.html", user=current_user, site_data=data)
 
 
-@app.route("/hippotherapy")
+@application.route("/hippotherapy")
 def hippotherapy():
     data = PagesData.query.get("hippotherapy")
 
     return render_template("hippotherapy.html", user=current_user, site_data=data)
 
 
-@app.route("/add_manure_type", methods=['GET', 'POST'])
+@application.route("/add_manure_type", methods=['GET', 'POST'])
 @login_required
 def add_manure_type():
     action = request.args.get("action")
@@ -585,7 +585,7 @@ def add_manure_type():
     return render_template("forms/add_manure.html", user=current_user, form=form)
 
 
-@app.route('/manure')
+@application.route('/manure')
 def manure():
     action = request.args.get('action')
     if current_user.is_authenticated and action:
@@ -602,6 +602,6 @@ def manure():
                            user=current_user)
 
 
-@app.errorhandler(404)
+@application.errorhandler(404)
 def page_not_found(error):
     return render_template('errors/404.html', user=current_user), 404

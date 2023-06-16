@@ -9,7 +9,7 @@ from wtforms import StringField, PasswordField, BooleanField, SubmitField, FileF
 from wtforms.widgets import TextArea
 from wtforms.validators import ValidationError, DataRequired, Email, EqualTo
 from app.models import User, Config, Gallery
-from app import app
+from app import application
 from app.validators import image_validation, pdf_validation, data_required, phone_validation
 
 
