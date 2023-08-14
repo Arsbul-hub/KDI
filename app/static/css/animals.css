@@ -26,11 +26,10 @@
 
 }
 
-.title-block .age {
+.animal .name  {
     font-size: 20px;
-    color: gray;
 
-    margin-left: 20px;
+
 }
 .animals-list {
     display: flex;
@@ -162,7 +161,7 @@
 
 
 
-    .animal .title-block {
+    .animal .name {
         font-size: 26px;
     }
 

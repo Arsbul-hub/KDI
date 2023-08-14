@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="20afb429-6d2f-4260-8491-b3f47e60edb9" name="Changes" comment="Исправлены баги со стилями на страницах с услугами.&#10;Исправлен баг с отображением блоков на странице &quot;Наши достижения&quot; + фикс ошибки при добавлении нового достижения.&#10;ДОбавлено затемнение блока &quot;after&quot; при наведении на панель навигации.">
+    <list default="true" id="20afb429-6d2f-4260-8491-b3f47e60edb9" name="Changes" comment="Отключение затемнения блока &quot;after&quot; при наведении на верхнюю панель навигации, т.к оно не полностью растягивается по высоте.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/css/base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/css/animals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/css/animals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/css/page.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/css/page.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/for_sale_animals.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/for_sale_animals.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/our_animals.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/our_animals.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -451,7 +454,7 @@
       <option name="project" value="LOCAL" />
       <updated>1686916656412</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -481,7 +484,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Подправка валидатора телефона" />
     <MESSAGE value="Подправка стилей" />
     <MESSAGE value="Исправление бага связанного с языком страниц (на некоторых был английский и google переводчик постоянно переводил русские страницы)&#10;Чистка проекта от лишних файлов" />
     <MESSAGE value="Исправление бага связанного с отображением новости" />
@@ -506,7 +508,8 @@
     <MESSAGE value="Фиксы багов стиля news.css и view_news.css" />
     <MESSAGE value="123" />
     <MESSAGE value="Исправлены баги со стилями на страницах с услугами.&#10;Исправлен баг с отображением блоков на странице &quot;Наши достижения&quot; + фикс ошибки при добавлении нового достижения.&#10;ДОбавлено затемнение блока &quot;after&quot; при наведении на панель навигации." />
-    <option name="LAST_COMMIT_MESSAGE" value="Исправлены баги со стилями на страницах с услугами.&#10;Исправлен баг с отображением блоков на странице &quot;Наши достижения&quot; + фикс ошибки при добавлении нового достижения.&#10;ДОбавлено затемнение блока &quot;after&quot; при наведении на панель навигации." />
+    <MESSAGE value="Отключение затемнения блока &quot;after&quot; при наведении на верхнюю панель навигации, т.к оно не полностью растягивается по высоте." />
+    <option name="LAST_COMMIT_MESSAGE" value="Отключение затемнения блока &quot;after&quot; при наведении на верхнюю панель навигации, т.к оно не полностью растягивается по высоте." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
