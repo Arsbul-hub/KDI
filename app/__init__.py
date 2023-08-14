@@ -26,11 +26,11 @@ login = LoginManager(application)
 login.login_view = 'login'
 
 morph = pymorphy3.MorphAnalyzer()
-locale.setlocale(
-    category=locale.LC_ALL,
-    locale="Russian"
-)
-
+# locale.setlocale(
+#     category=locale.LC_ALL,
+#     locale="Russian"
+# )
+locale.setlocale(locale.LC_ALL, '')
 
 def my_access_control_function():
     return current_user.is_authenticated

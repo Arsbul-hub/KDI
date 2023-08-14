@@ -22,14 +22,18 @@
 {% block after %}
 
 
-<p class="title">Наши лошади</p>
+<div class="title-block">
 
-{% if user.is_authenticated %}
+    <span class="title">Наши лошади</span>
+    <p class="subtitle">По всем вопросам обращайтесь по <a href="{{url_for('contacts')}}">телефону</a></p>
+    {% if user.is_authenticated %}
 
-<a class="add_button" href="{{url_for('add_animal', previous=request.full_path)}}">Добавить животное</a>
+    <a class="add_button" href="{{url_for('add_animal', previous=request.full_path)}}">Добавить животное</a>
 
-{% endif %}
+    {% endif %}
 
+
+</div>
 <div id="animals-blocks">
     <div class="animals-list" id="not-deleted">
         {% if animals %}
@@ -113,7 +117,6 @@
         </div>
         {% endif %}
     </div>
-
 
 
 </div>

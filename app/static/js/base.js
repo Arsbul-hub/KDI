@@ -1,7 +1,7 @@
 function open_top_menu() {
     document.getElementById("navigation").style.display = "block";
-    document.getElementById("mobile").style.height = "100vh";
-    document.getElementById("navigation").style.animation = "base_animation 0.5s forwards";
+    document.getElementById("mobile").style.height = "100%";
+    document.getElementById("navigation").style.animation = "base_animation 0.3s forwards";
     document.getElementById("open-navigation").style.display = "none";
     document.getElementById("close-navigation").style.display = "block";
 

@@ -19,14 +19,14 @@ body {
     justify-content: center;
     flex-direction: column;
     margin-bottom: 20px;
-    width: 500px;
+    width: 30%;
 }
 
 .social-networks-list {
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 500px;
+    width: 30%;
 }
 .social-networks-list a{
     width: 70%;
@@ -145,10 +145,11 @@ body {
     .social-networks-list a {
         width: 90%;
     }
-
-}
-@media only screen and (max-width: 1320px) {
-    #separator {
-        display: none;
+    .contacts-info {
+        width: 100%;
+    }
+    .social-networks-list  {
+        width: 100%;
     }
 }
+

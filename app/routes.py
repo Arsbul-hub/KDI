@@ -321,7 +321,7 @@ def achievements():
         return render_template("show_achievement.html", user=current_user, achievement=achievement)
     elif current_user.is_authenticated and action == "remove":
         achievement = Achievements.query.get(request.args.get('id'))
-        remove_file(achievement.cover)
+
         db.session.delete(achievement)
 
         db.session.commit()
