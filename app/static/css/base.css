@@ -13,6 +13,7 @@
     background-color: #404040;
 
 }
+/*
 #after:after {
   content: '';
   position: absolute;
@@ -31,7 +32,7 @@
 
 
 }
-
+*/
 .logo img {
     max-height: 90px;
 
@@ -265,9 +266,9 @@ a {
 
 
   }
-    #after:after {
+/*     #after:after {
         display: none;
-    }
+    }*/
 /*  #after {
     visibility: hidden;
 
