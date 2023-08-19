@@ -594,7 +594,7 @@ def manure():
 
             db.session.commit()
 
-        return redirect(request.args.get("previous"))
+        return redirect(url_for("manure"))
 
     manure_types = Manure.query.all()
 

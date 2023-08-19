@@ -16,18 +16,17 @@
      font-size: 30px;
 }
 
-.title-block div {
+.title-block  {
     display: flex;
     align-items: center;
-    justify-content: center;
-}
-.title-block {
-
-    flex-direction: column;
-
-
+    flex-direction: row;
+    justify-content: space-between;
 }
 
+.manure-title {
+    font-size: 25px;
+
+}
 .manure-list {
     display: flex;
     /* position: absolute; */
@@ -157,9 +156,11 @@
 
 
 
-
     .manure .title-block {
         font-size: 26px;
+
+        align-items: center;
+        flex-direction: column;
     }
 
     .item-block {

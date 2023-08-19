@@ -20,7 +20,7 @@
 
 .achievement-date {
 
-    font-size: 23px;
+    font-size: 19px;
     padding-left: 10px;
 }
 
@@ -110,7 +110,11 @@
     .item-block {
         width: 90% ;
     }
+    .achievement-date {
 
+        font-size: 16px;
+        padding-left: 10px;
+    }
 
 
 

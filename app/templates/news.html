@@ -55,14 +55,18 @@
 
 
 {% block after %}
+<div class="page-title-block">
 
-<span class="title">Новости</span>
-{% if user.is_authenticated %}
+    <span class="title">Новости</span>
+    <p class="subtitle">По всем вопросам обращайтесь по <a href="{{url_for('contacts')}}">телефону</a></p>
+    {% if user.is_authenticated %}
+    <a class="add_button" href="{{url_for('add_news')}}">Создать новость</a>
+    {% endif %}
 
-<a class="add_button" href="{{url_for('add_news')}}">Создать новость</a>
+
+</div>
 
 
-{% endif %}
 <nav class="category-navigation">
     <ul>
         <a onclick="show_new()">
@@ -148,7 +152,6 @@
     <div class="news-list" id="old_news" style="opacity: 0; display: none;">
         {% if old_news %}
         {% for n in old_news %}
-
         <dialog id="confirm-dialog-{{n.id}}-remove" class="confirm-dialog">
 
             <p class="dialog-title">Вы действительно хотите удалить эту новость?</p>
@@ -191,13 +194,13 @@
                 <div class="news">
                     <span class="title-block">{{ n.title }}</span>
                     <hr>
-                    <div class="news-body">
+                    <p class="news-body">
                         <!--                        Текст новости чисто без разметки -->
-                        <p>
-                            {{ BeautifulSoup(n.body, 'lxml').get_text()}}
-                        </p>
-                    </div>
-                    <a class="view-all" href="{{url_for('news', action='show', id=n.id)}}"><h3>Читать дальше</h3></a>
+
+                        {{ BeautifulSoup(n.body, 'lxml').get_text()}}
+
+                    </p>
+                    <a class="view-all" href="{{url_for('news', action='show', id=n.id)}}">Читать дальше</a>
                 </div>
 
 

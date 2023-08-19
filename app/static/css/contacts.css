@@ -5,11 +5,9 @@ body {
     margin-top: 0!important;
     margin-right: 10px;
 }
-.title-block {
-    display: flex;
+.page-title-block {
     margin-top: 50px;
-    align-items: center;
-    justify-content: center;
+
 
 }
 

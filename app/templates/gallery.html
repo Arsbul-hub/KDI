@@ -20,14 +20,20 @@
 
 
 {% block after %}
+<div class="page-title-block">
 
-<span class="title">Галерея</span>
-{% if user.is_authenticated %}
+    <span>Галерея</span>
+    <p class="subtitle">По всем вопросам обращайтесь по <a href="{{url_for('contacts')}}">телефону</a></p>
+    {% if user.is_authenticated %}
 
-<a class="add_button" href="{{url_for('add_image_to_gallery')}}">Добавить изображение</a>
+    <a class="add_button" href="{{url_for('add_image_to_gallery')}}">Добавить изображение</a>
 
 
-{% endif %}
+    {% endif %}
+
+
+</div>
+
 
 <div id="news-blocks">
 
@@ -76,7 +82,7 @@
         </dialog>
 
         <div class="item-block">
-            <a  onclick="open_image_dialog({{n.id}});">
+            <a onclick="open_image_dialog({{n.id}});">
 
 
                 <img class="cover" src="{{ n.file }}">

@@ -19,14 +19,19 @@
 
 
 {% block after %}
+<div class="page-title-block">
 
-<span class="title">Наши достижения</span>
-{% if user.is_authenticated %}
+    <span class="title">Наши достижения</span>
+    <p class="subtitle">По всем вопросам обращайтесь по <a href="{{url_for('contacts')}}">телефону</a></p>
+    {% if user.is_authenticated %}
 
-<a class="add_button" href="{{url_for('add_achievement')}}">Добавить достижение</a>
+    <a class="add_button" href="{{url_for('add_achievement')}}">Добавить достижение</a>
 
 
-{% endif %}
+    {% endif %}
+
+</div>
+
 
 <div id="achievements-blocks">
 

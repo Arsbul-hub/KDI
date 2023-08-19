@@ -15,19 +15,24 @@
 
 
 {% block after %}
-<div class="title-block">
+<div class="page-title-block">
 
-    <span class="title">Контакты</span>
+    <div>
 
-    {% if user.is_authenticated %}
-    <div class="tools">
-        <a href="{{url_for('edit_contacts')}}">
-            <i class="fa-solid fa-pen"></i>
+        <span class="title">Контакты</span>
 
-        </a>
+        {% if user.is_authenticated %}
+        <div class="tools">
+            <a href="{{url_for('edit_contacts')}}">
+                <i class="fa-solid fa-pen"></i>
+
+            </a>
+        </div>
+        {% endif %}
     </div>
-    {% endif %}
+
 </div>
+
 <div id="contacts">
     <div class="contacts-info">
 
@@ -47,29 +52,28 @@
         </div>
 
 
-
     </div>
 
     <div class="social-networks-list">
 
-<!--        <a href="{{dzen}}" target="_blank" style="color: black; margin: 10px 0">-->
-<!--            <div class="social-network" id="dzen">-->
-<!--                <img src="/static/images/dzen.png">-->
-<!--                <p>Наш Дзен</p>-->
+        <!--        <a href="{{dzen}}" target="_blank" style="color: black; margin: 10px 0">-->
+        <!--            <div class="social-network" id="dzen">-->
+        <!--                <img src="/static/images/dzen.png">-->
+        <!--                <p>Наш Дзен</p>-->
 
 
-<!--                &lt;!&ndash;https://vk.com/public_dari_dobro_pokrov&ndash;&gt;-->
-<!--            </div>-->
-<!--        </a>-->
-<!--        <a href={{ok}}" target="_blank" style="color: black; margin: 10px 0">-->
-<!--            <div class="social-network" id="ok">-->
-<!--                <i class="fa-brands fa-square-odnoklassniki"></i>-->
-<!--                <p>Мы в одноклассниках</p>-->
+        <!--                &lt;!&ndash;https://vk.com/public_dari_dobro_pokrov&ndash;&gt;-->
+        <!--            </div>-->
+        <!--        </a>-->
+        <!--        <a href={{ok}}" target="_blank" style="color: black; margin: 10px 0">-->
+        <!--            <div class="social-network" id="ok">-->
+        <!--                <i class="fa-brands fa-square-odnoklassniki"></i>-->
+        <!--                <p>Мы в одноклассниках</p>-->
 
 
-<!--                &lt;!&ndash;https://vk.com/public_dari_dobro_pokrov&ndash;&gt;-->
-<!--            </div>-->
-<!--        </a>-->
+        <!--                &lt;!&ndash;https://vk.com/public_dari_dobro_pokrov&ndash;&gt;-->
+        <!--            </div>-->
+        <!--        </a>-->
         <a href="{{vk}}" target="_blank" style="color: black; margin: 10px 0">
             <div class="social-network" id="vk">
                 <i class="fa-brands fa-vk"></i>

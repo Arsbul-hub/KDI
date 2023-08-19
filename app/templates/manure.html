@@ -20,9 +20,9 @@
 
 <body>
 {% block after %}
-<div class="title-block">
+<div class="page-title-block">
 
-    <span class="title">Конский навоз</span>
+    <span>Конский навоз</span>
     <p class="subtitle">По всем вопросам обращайтесь по <a href="{{url_for('contacts')}}">телефону</a></p>
     {% if user.is_authenticated %}
 
@@ -63,6 +63,17 @@
 
 
         </dialog>
+            <dialog id="confirm-dialog-{{manure.id}}-remove" class="confirm-dialog">
+
+            <p class="dialog-title">Вы действительно хотите удалить этот товар?</p>
+            <hr>
+            <div class="buttons">
+                <a onclick="close_confirm_dialog({{manure.id}}, 'remove');">Отмена</a>
+                <a href="{{url_for('manure', action='remove', id=manure.id)}}">Да</a>
+            </div>
+
+
+        </dialog>
         <div class="item-block">
 
 
@@ -86,7 +97,7 @@
 
                 <div class="manure">
                     <div class="title-block">
-                        <span>{{ manure.name }}</span>
+                        <span class="manure-title">{{ manure.name }}</span>
                         {% if manure.in_stock %}
                         <span class="in_stock" style="color: green; font-size: 16px;">в наличии</span>
                         {% else %}

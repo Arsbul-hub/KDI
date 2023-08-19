@@ -31,16 +31,21 @@ a {
 h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
 }
-.title {
+.page-title-block span {
     font-size: 33px;
     text-align: center;
     margin-top: 50px;
 }
-.title-block {
+.page-title-block {
     display: flex;
-    align-items: center;
-
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.page-title-block div {
+    display: flex;
+    flex-direction: row;
 
 }
 

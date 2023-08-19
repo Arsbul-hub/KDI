@@ -21,14 +21,22 @@
 <body>
 {% block after %}
 
+<div class="page-title-block">
 
-<p class="title">Наша команда</p>
+    <span class="title">Наша команда</span>
+    <p class="subtitle">По всем вопросам обращайтесь по <a href="{{url_for('contacts')}}">телефону</a></p>
+    {% if user.is_authenticated %}
 
-{% if user.is_authenticated %}
+    <a class="add_button" href="{{url_for('add_person', previous=request.full_path)}}">Добавить участника</a>
 
-<a class="add_button" href="{{url_for('add_person', previous=request.full_path)}}">Добавить участника</a>
+    {% endif %}
 
-{% endif %}
+
+</div>
+
+
+
+
 
 <div id="person-blocks">
     <div class="team-list">

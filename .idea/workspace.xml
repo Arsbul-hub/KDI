@@ -4,12 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="20afb429-6d2f-4260-8491-b3f47e60edb9" name="Changes" comment="Отключение затемнения блока &quot;after&quot; при наведении на верхнюю панель навигации, т.к оно не полностью растягивается по высоте.">
+    <list default="true" id="20afb429-6d2f-4260-8491-b3f47e60edb9" name="Changes" comment="Исправление бага со стилем &quot;animals&quot;.&#10;Поправлено отображение надписи &quot;По всем вопросам обращайтесь по телефону&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.db" beforeDir="false" afterPath="$PROJECT_DIR$/app.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/css/achievements.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/css/achievements.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/static/css/animals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/css/animals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/css/contacts.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/css/contacts.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/css/manure.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/css/manure.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/static/css/page.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/css/page.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/css/view_news.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/css/view_news.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/achievements.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/achievements.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/contacts.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/contacts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/crew_riding.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/crew_riding.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/for_sale_animals.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/for_sale_animals.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/gallery.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/hippotherapy.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/hippotherapy.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/horse_riding.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/horse_riding.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/manure.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/manure.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/news.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/our_animals.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/our_animals.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/show_news.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/show_news.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/team.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/team.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +60,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/arsbul/Рабочий стол/KDI/app/static/loaded_media",
+    "last_opened_file_path": "/home/arsbul/Рабочий стол/KDI",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -454,7 +472,7 @@
       <option name="project" value="LOCAL" />
       <updated>1686916656412</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -484,7 +502,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Подправка стилей" />
     <MESSAGE value="Исправление бага связанного с языком страниц (на некоторых был английский и google переводчик постоянно переводил русские страницы)&#10;Чистка проекта от лишних файлов" />
     <MESSAGE value="Исправление бага связанного с отображением новости" />
     <MESSAGE value="Исправление бага со стилем диалогового окна в галерее" />
@@ -509,7 +526,8 @@
     <MESSAGE value="123" />
     <MESSAGE value="Исправлены баги со стилями на страницах с услугами.&#10;Исправлен баг с отображением блоков на странице &quot;Наши достижения&quot; + фикс ошибки при добавлении нового достижения.&#10;ДОбавлено затемнение блока &quot;after&quot; при наведении на панель навигации." />
     <MESSAGE value="Отключение затемнения блока &quot;after&quot; при наведении на верхнюю панель навигации, т.к оно не полностью растягивается по высоте." />
-    <option name="LAST_COMMIT_MESSAGE" value="Отключение затемнения блока &quot;after&quot; при наведении на верхнюю панель навигации, т.к оно не полностью растягивается по высоте." />
+    <MESSAGE value="Исправление бага со стилем &quot;animals&quot;.&#10;Поправлено отображение надписи &quot;По всем вопросам обращайтесь по телефону&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправление бага со стилем &quot;animals&quot;.&#10;Поправлено отображение надписи &quot;По всем вопросам обращайтесь по телефону&quot;" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
