@@ -107,7 +107,7 @@
 
                     <hr>
                     <p class="manures-body">
-                        {{ BeautifulSoup(manure.body, 'lxml').get_text()}}
+                        {{ manure.body | safe}}
                     </p>
 
                 </div>
