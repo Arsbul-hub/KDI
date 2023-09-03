@@ -8,6 +8,8 @@ from wtforms import StringField, PasswordField, BooleanField, SubmitField, FileF
     SelectField
 from wtforms.widgets import TextArea
 from wtforms.validators import ValidationError, DataRequired, Email, EqualTo
+
+from app import application
 from app.models import User, Config, Gallery
 from app import application
 from app.validators import image_validation, pdf_validation, data_required, phone_validation
@@ -49,7 +51,7 @@ class RegistrationForm(FlaskForm):
 
         if user:
             raise ValidationError('Это имя пользователя занято')
-        elif username.data == app.config["DEFAULT_ADMIN_USERNAME"]:
+        elif username.data == application.config["DEFAULT_ADMIN_USERNAME"]:
             raise ValidationError('Это имя пользователя совпадает с базовым аккаунтом администратора!')
 
     def validate_password2(self, password):
