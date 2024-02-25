@@ -45,7 +45,10 @@
 
     width: 100%;
 }*/
-
+.content .title {
+    font-size: 18px;
+    text-align: center;
+}
 
 .title {
     margin-top: 0!important;

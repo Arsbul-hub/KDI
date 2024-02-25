@@ -112,7 +112,11 @@ def index():
     if Config.query.filter_by(category="config").all():
         allow_background_image = Config.query.get("allow_background_image").value
         site_name = Config.query.get("site_name").value
-    return render_template("index.html", user=current_user, site_data=data, site_name=site_name,
+    return render_template("index.html",
+                           user=current_user,
+                           site_data=data,
+                           site_name=site_name,
+                           gallery_list=db.session.query(Gallery).order_by(Gallery.timestamp).all()[:3],
                            allow_background_image=allow_background_image)
 
 
@@ -425,7 +429,6 @@ def gallery():
             db.session.delete(image)
             remove_file(image.file)
             db.session.commit()
-
         return redirect(url_for("gallery"))
 
     return render_template("gallery.html", user=current_user, gallery_list=Gallery.query.all())

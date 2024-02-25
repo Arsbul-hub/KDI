@@ -14,9 +14,8 @@
     <title>Не известно</title>
     {% endif %}
     {% endif %}
-    <meta name="Keywords" content="Покров, Дари добро, дари добро, покров волонтёры, волонтёры, помощь животным">
     <link rel="stylesheet" type="text/css" href="/static/css/index.css">
-
+    <link rel="stylesheet" type="text/css" href="/static/css/gallery.css">
     {% if request.endpoint == "index" and allow_background_image == '1' %}
     <style>
         #bg-image {
@@ -63,7 +62,32 @@
     <hr>
 
     {% if site_data.description %}
-    <div>{{ site_data.description | safe}}</div>
+    <div class="content-main">
+        <div class="main-text">
+        {{ site_data.description | safe}}
+        </div>
+
+        <div class="main-gallery">
+            <h2 class="content-title">Галлерея</h2>
+            {% if gallery_list %}
+            <ul class="gallery-list">
+                {% for n in gallery_list %}
+                <li class="list-item">
+                    <img class="cover" src="{{ n.file }}">
+                </li>
+                {% endfor %}
+            </ul>
+
+            {% else %}
+            <div class="is-empty">
+                <img src="static/images/empty-box-icon.svg"
+                     style="filter: invert(57%) sepia(6%) saturate(16%) hue-rotate(43deg) brightness(87%) contrast(89%);">
+                <p>Пока здесь пусто</p>
+
+            </div>
+            {% endif %}
+        </div>
+    </div>
     {% else %}
     <p>Описание не задано</p>
     {% endif %}

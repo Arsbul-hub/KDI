@@ -81,6 +81,7 @@ class Gallery(__basemodel):
     id = sa.Column(sa.Integer, primary_key=True)
     title = sa.Column(sa.String())
     file = sa.Column(sa.String())
+    timestamp = sa.Column(sa.DateTime, index=True, default=datetime.utcnow)
 
 
 class Config(__basemodel):

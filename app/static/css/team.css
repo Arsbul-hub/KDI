@@ -118,7 +118,7 @@
 .avatar {
     display: block;
     border-top: 10px;
-    border-radius: 100%;
+    border-radius: 40px;
 
     margin-bottom: 20px;
     padding: 0 10px;

@@ -1,88 +1,26 @@
 
-.title {
-    
-    display: flex;
-    justify-content: center;
-}
-
-.news-list {
+.content-main .main-gallery .gallery-list {
     display: flex;
 
     padding-bottom: 20px;
-    flex-wrap: wrap;
+    list-style: none;
     justify-content: center;
     margin-top: 25px;
-
+    padding-left: 0;
     animation: show_animation 1s forwards;
 
 }
 
-.news-date {
 
-    font-size: 23px;
 
-}
-
-.title-block {
-  font-size: 24px;
-  margin-bottom: 10px;
-
-  vertical-align: top;
-  display: inline;
-} 
-#news-blocks {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-    height: 100%;
-    align-items: center;
-}
-
-.item-block {
+.content-main .main-gallery .gallery-list .list-item{
     display: block;
     width: 250px ;
     margin: 10px;
-
+    
 }
 
-.news {
-    display: block;
-    margin-left: 10px;
-    vertical-align: top;
-
-}
-
-.news-body {
-    overflow: hidden;
-    white-space: normal;
-    margin-top: 10px;
-    margin-bottom: 40px;
-    max-height: 80px
-
-
-}
-
-.news-body p{
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-size: 16px;
-    font-weight: normal;
-}
-
-
-
-.tools a {
-    display: flex;
-    white-space: nowrap;
-    justify-content: flex-end;
-    margin-left: 10px;
-}
-
-.tools {
-    display: flex;
-    align-items: center;
-}
-
+/* 
 
 .view-all {
     font-size: 16px;
@@ -91,9 +29,9 @@
     color: black;
     font-weight: bold;
     align-items: flex-end;
-}
+} */
 
-.cover {
+.content-main .main-gallery .gallery-list .cover {
 
     display: block;
     border-top: 10px;
